@@ -1,21 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sábios do Multiverso</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div class="container">
     <h1>✨ Sábios do Multiverso ✨</h1>
     <div class="quote-card">
-      <p class="quote">"<%= content %>"</p>
-      <p class="author">— <%= author %></p>
-      <form method="get" action="/">
-        <button class="btn">Me Inspire</button>
-      </form>
+      <blockquote class="quote">"<%= content %>"</blockquote>
+      <cite class="author">— <%= author %></cite>
+      
+      <div class="actions">
+        <button class="btn" onclick="novaFrase()">➕ Nova Frase</button>
+        <div class="social">
+          <a href="#" onclick="compartilhar('whatsapp')" title="WhatsApp">📱</a>
+          <a href="#" onclick="compartilhar('twitter')" title="X">🐦</a>
+          <a href="#" onclick="favoritar()" title="Favoritar">❤️</a>
+        </div>
+      </div>
+      
+      <div class="stats">
+        <small>Frases vistas hoje: <span id="views">0</span></small>
+      </div>
     </div>
   </div>
+
+  <script>
+    let views = parseInt(localStorage.getItem('views') || 0);
+    document.getElementById('views').textContent = views;
+    
+    async function novaFrase() {
+      const btn = document.querySelector('.btn');
+      const quoteEl = document.querySelector('.quote');
+      const authorEl = document.querySelector('.author');
+      
+      btn.textContent = '✨ Carregando...';
+      btn.disabled = true;
+      quoteEl.style.opacity = '0.5';
+      
+      try {
+        const res = await fetch('/api/nova');
+        const { content, author } = await res.json();
+        
+        quoteEl.style.transition = 'opacity 0.5s';
+        setTimeout(() => {
+          quoteEl.textContent = `"${content}"`;
+          authorEl.textContent = `— ${author}`;
+          quoteEl.style.opacity = '1';
+        }, 200);
+        
+        views++;
+        localStorage.setItem('views', views);
+        document.getElementById('views').textContent = views;
+      } finally {
+        btn.textContent = '➕ Nova Frase';
+        btn.disabled = false;
+      }
+    }
+
+    function compartilhar(rede) {
+      const quote = document.querySelector('.quote').textContent;
+      const author = document.querySelector('.author').textContent;
+      const text = `${quote} ${author}`;
+      const url = encodeURIComponent(window.location.href);
+      
+      if (rede === 'whatsapp') 
+        window.open(`https://wa.me/?text=${encodeURIComponent(text)}%20${url}`);
+      if (rede === 'twitter') 
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`);
+    }
+
+    function favoritar() {
+      const quote = { 
+        content: document.querySelector('.quote').textContent, 
+        author: document.querySelector('.author').textContent,
+        date: new Date().toLocaleDateString('pt-BR')
+      };
+      let favs = JSON.parse(localStorage.getItem('favoritos') || '[]');
+      favs.unshift(quote); // adiciona no início
+      localStorage.setItem('favoritos', JSON.stringify(favs.slice(0, 50))); // max 50
+      document.querySelector('.social a:last-child').style.color = '#f9d923';
+    }
+  </script>
 </body>
 </html>
