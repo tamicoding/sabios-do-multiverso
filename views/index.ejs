@@ -6,6 +6,8 @@
   <title>Sábios do Multiverso</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
 </head>
 <body>
   <div class="container">
@@ -17,9 +19,12 @@
       <div class="actions">
         <button class="btn" onclick="novaFrase()">➕ Nova Frase</button>
         <div class="social">
-          <a href="#" onclick="compartilhar('whatsapp')" title="WhatsApp">📱</a>
-          <a href="#" onclick="compartilhar('twitter')" title="X">🐦</a>
-          <a href="#" onclick="favoritar()" title="Favoritar">❤️</a>
+          <a href="#" onclick="compartilhar('whatsapp')" title="WhatsApp" class="social-icon">
+    <i class="fab fa-whatsapp"></i></a>
+          <a href="#" onclick="compartilhar('twitter')" title="X" class="social-icon">
+    <i class="fab fa-x-twitter"></i></a>
+          <a href="#" onclick="favoritar()" title="Favoritar" class="social-icon">
+    <i class="fas fa-star"></i></a>
         </div>
       </div>
       
