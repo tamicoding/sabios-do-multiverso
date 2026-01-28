@@ -17,7 +17,6 @@ app.get("/", async (req, res) => {
   }
 });
 
-// NOVA ROTA AJAX
 app.get("/api/nova", async (req, res) => {
   try {
     const { content, author } = await getRandomQuoteTranslated();
