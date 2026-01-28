@@ -1,5 +1,6 @@
 Sábios do Multiverso
-Aplicação web de frases inspiradoras traduzidas automaticamente para português brasileiro. Interface glassmorphism responsiva com interações AJAX e deploy otimizado no Render.
+Aplicação web de frases inspiradoras traduzidas automaticamente para PT-BR. 
+Interface glassmorphism responsiva com interações AJAX e deploy otimizado no Render.
 
 Demo Ao Vivo
 https://sabios-do-multiverso.onrender.com
