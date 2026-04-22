@@ -1,0 +1,18 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="20" y1="16" x2="164" y2="176" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06131D"/>
+      <stop offset="1" stop-color="#123149"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="46" y1="40" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD166"/>
+      <stop offset="1" stop-color="#FF9F1C"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="168" height="168" rx="44" fill="url(#bg)"/>
+  <circle cx="139" cy="49" r="17" fill="#80FFDB" fill-opacity="0.4"/>
+  <circle cx="54" cy="141" r="22" fill="#CDB4FF" fill-opacity="0.22"/>
+  <path d="M46 62C46 55.3726 51.3726 50 58 50H118C124.627 50 130 55.3726 130 62V117C130 123.627 124.627 129 118 129H84L64 147V129H58C51.3726 129 46 123.627 46 117V62Z" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.14" stroke-width="2"/>
+  <rect x="58" y="42" width="46" height="46" rx="16" fill="url(#badge)"/>
+  <path d="M74.94 69.174V55.5H90.03V61.986C90.03 65.434 89.234 68.04 87.642 69.804C86.078 71.54 83.766 72.69 80.706 73.254L79.632 70.344C81.26 69.95 82.466 69.316 83.25 68.442C84.062 67.568 84.498 66.404 84.558 64.95H79.896V69.174H74.94Z" fill="#10202B"/>
+</svg>

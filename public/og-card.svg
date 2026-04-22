@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="72" y1="42" x2="1104" y2="594" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06131D"/>
+      <stop offset="1" stop-color="#123149"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="128" y1="128" x2="318" y2="206" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD166"/>
+      <stop offset="1" stop-color="#FF9F1C"/>
+    </linearGradient>
+    <filter id="blurA" x="-80" y="-80" width="420" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="blurB" x="820" y="360" width="420" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" rx="0" fill="url(#bg)"/>
+  <circle cx="130" cy="128" r="90" fill="#FFD166" fill-opacity="0.18" filter="url(#blurA)"/>
+  <circle cx="1040" cy="574" r="90" fill="#80FFDB" fill-opacity="0.16" filter="url(#blurB)"/>
+  <rect x="76" y="62" width="1048" height="506" rx="34" fill="#071B29" fill-opacity="0.84" stroke="#A9E3FF" stroke-opacity="0.14" stroke-width="2"/>
+  <rect x="126" y="110" width="208" height="70" rx="28" fill="url(#badge)"/>
+  <text x="196" y="156" fill="#10202B" font-size="44" font-family="Georgia, serif" font-weight="700">"</text>
+  <text x="126" y="224" fill="#80FFDB" font-size="20" font-family="Arial, sans-serif" letter-spacing="3">ARQUIVO COSMICO DE FRASES</text>
+  <text x="126" y="302" fill="#F3FBFF" font-size="72" font-family="Georgia, serif" font-weight="700">Sabios do</text>
+  <text x="126" y="372" fill="#F3FBFF" font-size="72" font-family="Georgia, serif" font-weight="700">Multiverso</text>
+  <text x="126" y="458" fill="#F3FBFF" font-size="34" font-family="Arial, sans-serif">
+    Explore frases por tema, humor, autor e universo
+  </text>
+  <text x="126" y="506" fill="#96B9CB" font-size="28" font-family="Arial, sans-serif">
+    com favoritos, historico e cards prontos para compartilhar.
+  </text>
+  <rect x="126" y="526" width="162" height="34" rx="17" fill="white" fill-opacity="0.06"/>
+  <text x="154" y="548" fill="#96B9CB" font-size="18" font-family="Arial, sans-serif">portfolio react</text>
+  <rect x="304" y="526" width="168" height="34" rx="17" fill="white" fill-opacity="0.06"/>
+  <text x="334" y="548" fill="#96B9CB" font-size="18" font-family="Arial, sans-serif">github pages</text>
+</svg>

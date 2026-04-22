@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1D2A"/>
+      <stop offset="1" stop-color="#123149"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="16" y1="14" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD166"/>
+      <stop offset="1" stop-color="#FF9F1C"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#bg)"/>
+  <circle cx="46" cy="17" r="6" fill="#80FFDB" fill-opacity="0.55"/>
+  <path d="M16 21C16 18.7909 17.7909 17 20 17H38C40.2091 17 42 18.7909 42 21V39C42 41.2091 40.2091 43 38 43H27.5L21 49V43H20C17.7909 43 16 41.2091 16 39V21Z" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.18"/>
+  <rect x="20" y="14" width="16" height="16" rx="6" fill="url(#badge)"/>
+  <path d="M26.114 23.564V18.8H31.004V21.06C31.004 22.262 30.746 23.17 30.23 23.784C29.722 24.39 28.97 24.792 27.974 24.99L27.596 23.974C28.126 23.848 28.522 23.632 28.784 23.326C29.054 23.02 29.198 22.614 29.216 22.108H27.706V23.564H26.114Z" fill="#10202B"/>
+</svg>

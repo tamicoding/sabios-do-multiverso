@@ -1,224 +1,217 @@
-🇺🇸 English
+# Sabios do Multiverso
 
-# Sábios do Multiverso
+Aplicacao front-end em `React + Vite` focada em curadoria de frases, exploracao por filtros e uma interface visual com identidade propria.
 
-Web application for inspirational quotes automatically translated to Brazilian Portuguese.  
-Responsive glassmorphism interface with AJAX interactions and optimized deployment on Render.
+---
 
-## Demo (Live):  
-https://sabios-do-multiverso.onrender.com
+## PT-BR
 
-### About the Project
+### Visao geral
 
-Sábios do Multiverso is a web application that generates inspirational quotes and automatically translates them into Brazilian Portuguese.
+Sabios do Multiverso e um projeto de portfolio pensado como um pequeno produto digital: uma colecao de frases marcantes com filtros por `autor`, `tema`, `humor` e `universo`, alem de recursos de favoritos, historico, compartilhamento social e exportacao de cards.
 
-The project focuses on asynchronous interactions, UI animation, client-side persistence, and deployment optimization.
+O objetivo do projeto foi sair de uma base simples e transformar a experiencia em algo mais refinado, com:
 
-### Features
+- interface mais autoral;
+- estado organizado em componentes React;
+- interacoes mais claras para leitura e descoberta;
+- estrutura preparada para deploy no `Vercel`.
 
-- Instant generation of new quotes via AJAX with animation  
-- Native sharing to WhatsApp and Twitter/X  
-- Favorites system using LocalStorage (maximum of 50 items)  
-- Persistent view counter  
-- Automatic translation (English → Brazilian Portuguese)  
-- Fully responsive glassmorphism design  
+### Destaques do projeto
 
-### Technology Stack
+- Curadoria de frases com exploracao por filtros.
+- Busca por autor.
+- Historico de leitura recente.
+- Favoritos salvos localmente.
+- Compartilhamento para `WhatsApp`, `Instagram` e `X`.
+- Geracao de card para postagem.
+- Variacao visual por humor.
+- Base local com ampliacao via fonte remota de quotes.
 
-- Node.js  
-- Express.js  
-- EJS Templates  
-- ZenQuotes API  
-- Google Translate API (free, unofficial)  
-- Vanilla JavaScript  
-- CSS3  
-- LocalStorage  
-- Render (free tier)  
+### Stack
 
-### Project Structure
+- `React`
+- `Vite`
+- `CSS` puro
+- `localStorage`
+- `Vercel Functions` para rotas de apoio
 
+### O que este projeto demonstra
+
+- Estruturacao de interface em componentes reutilizaveis.
+- Organizacao de estado em uma aplicacao pequena, mas com varias interacoes.
+- Cuidado com identidade visual e consistencia de experiencia.
+- Adaptacao de uma ideia simples para um formato mais forte de portfolio.
+- Preparacao para deploy e integracao com APIs externas.
+
+### Screenshots
+
+Adicione aqui depois do deploy:
+
+```md
+![Home desktop](./docs/screenshots/home-desktop.png)
+![Filtros e leitura](./docs/screenshots/filters-reading.png)
+![Versao mobile](./docs/screenshots/mobile-view.png)
+```
+
+### Estrutura principal
+
+```text
 sabios-do-multiverso/
-├── app.js (Express server and routes)
-├── services/
-│ └── quoteService.js (quotes and translation)
-├── views/
-│ └── index.ejs (main template)
-├── public/
-│ └── css/style.css (glassmorphism styling)
-├── package.json
-└── README.md
+|- api/
+|  |- quotes.js
+|  `- translate.js
+|- public/
+|- src/
+|  |- components/
+|  |- data/
+|  |- hooks/
+|  |- services/
+|  |- App.jsx
+|  |- main.jsx
+|  `- styles.css
+|- index.html
+|- package.json
+|- vite.config.js
+`- README.md
+```
 
-### Local Installation
+### Como rodar localmente
 
-git clone https://github.com/YOUR-USERNAME/sabios-do-multiverso.git
-cd sabios-do-multiverso
+```bash
 npm install
-npm start
-Access:
-http://localhost:3000
+npm run dev
+```
 
-Production Deployment
-Configured for Render (free tier):
+### Build
 
-Build Command: npm install
+```bash
+npm run build
+```
 
-Start Command: node app.js
+### Deploy
 
-URL: https://sabios-do-multiverso.onrender.com
+O caminho recomendado para producao e o `Vercel`, porque o projeto usa rotas em `api/` para apoiar o carregamento remoto de frases e a traducao sob demanda.
 
-## How It Works
+#### Variaveis de ambiente para traducao
 
-Main route (/) renders an EJS template with a translated quote
+Se quiser habilitar traducao no deploy, configure:
 
-AJAX endpoint (/api/nova) returns JSON with new quotes
+- `LIBRETRANSLATE_URL`
+- `LIBRETRANSLATE_API_KEY` opcional
+- `LIBRETRANSLATE_TARGET` opcional, com padrao `pt`
 
-quoteService.js consumes ZenQuotes API and handles translation
+### Possiveis proximos passos
 
-Frontend manages animations, sharing, and LocalStorage
+- finalizar e validar o fluxo de traducao em producao;
+- adicionar screenshots reais no README;
+- incluir testes de interface;
+- refinar ainda mais os estados mobile;
+- criar uma pagina de apresentacao do projeto no portfolio principal.
 
-CSS implements glassmorphism using backdrop-filter
+---
 
-Key Challenges Solved
-JavaScript syntax corrections in the service layer
+## English
 
-Robust fallback handling for translation failures
+### Overview
 
-Responsive layout for buttons and long text
+Sabios do Multiverso is a `React + Vite` front-end portfolio project designed as a small digital product: a curated quote experience with filtering, favorites, reading history, social sharing and visual card export.
 
-Multi-environment configuration (local + Render)
+The project started from a simpler base and was redesigned to feel more intentional, polished and portfolio-ready, with:
 
-Optimized asynchronous loading with async/await
+- stronger visual identity;
+- clearer component-based structure;
+- more thoughtful interaction design;
+- deployment-ready architecture for `Vercel`.
 
-## Technical Highlights
+### Project highlights
 
-Asynchronous loading with error handling
+- Quote exploration with multiple filters.
+- Author search.
+- Recently viewed history.
+- Locally saved favorites.
+- Social sharing for `WhatsApp`, `Instagram` and `X`.
+- Card export for posts and stories.
+- Mood-based visual accents.
+- Local collection extended through remote quote loading.
 
-CSS animations with cubic-bezier timing functions
+### Stack
 
-Semantic HTML5 elements (blockquote, cite)
+- `React`
+- `Vite`
+- Plain `CSS`
+- `localStorage`
+- `Vercel Functions`
 
-Prepared for PWA (service worker ready)
+### What this project showcases
 
-Optimized performance (25KB gzipped)
+- Reusable component-based UI structure.
+- State handling for a small app with multiple user interactions.
+- Strong attention to visual identity and UX consistency.
+- Ability to turn a simple idea into a more product-oriented portfolio piece.
+- Deployment preparation and external API integration.
 
-## Notes 
+### Screenshots
 
-Developed as a portfolio study project in January 2026.
+Add your screenshots here after deployment:
 
-PT-BR
+```md
+![Home desktop](./docs/screenshots/home-desktop.png)
+![Filters and reading flow](./docs/screenshots/filters-reading.png)
+![Mobile view](./docs/screenshots/mobile-view.png)
+```
 
-# Sábios do Multiverso
+### Main structure
 
-## Sobre o Projeto
-
-Sábios do Multiverso é uma aplicação web que gera frases inspiradoras e as traduz automaticamente para português brasileiro.
-
-O projeto tem como foco interações assíncronas, animações de interface, persistência no cliente e otimização para deploy.
-
-## Demo (Live):  
-https://sabios-do-multiverso.onrender.com
-
-## Funcionalidades
-
-Geração instantânea de novas frases via AJAX com animação
-
-Compartilhamento nativo para WhatsApp e Twitter/X
-
-Sistema de favoritos com LocalStorage (máximo de 50)
-
-Contador persistente de visualizações
-
-Tradução automática (inglês → português brasileiro)
-
-Design glassmorphism totalmente responsivo
-
-## Stack Tecnológica
-
-Node.js
-
-Express.js
-
-EJS Templates
-
-ZenQuotes API
-
-Google Translate API (gratuita, não-oficial)
-
-Vanilla JavaScript
-
-CSS3
-
-LocalStorage
-
-Render (plano gratuito)
-
-## Estrutura do Projeto
-
+```text
 sabios-do-multiverso/
-├── app.js (servidor Express + rotas)
-├── services/
-│   └── quoteService.js (quotes + tradução)
-├── views/
-│   └── index.ejs (template principal)
-├── public/
-│   └── css/style.css (estilo glassmorphism)
-├── package.json
-└── README.md
+|- api/
+|  |- quotes.js
+|  `- translate.js
+|- public/
+|- src/
+|  |- components/
+|  |- data/
+|  |- hooks/
+|  |- services/
+|  |- App.jsx
+|  |- main.jsx
+|  `- styles.css
+|- index.html
+|- package.json
+|- vite.config.js
+`- README.md
+```
 
-## Instalação Local
+### Run locally
 
-git clone https://github.com/SEUUSER/sabios-do-multiverso.git
-cd sabios-do-multiverso
+```bash
 npm install
-npm start
-Acessar:
-http://localhost:3000
+npm run dev
+```
 
-Deploy em Produção
-Configurado para Render (plano gratuito):
+### Build
 
-Build Command: npm install
+```bash
+npm run build
+```
 
-Start Command: node app.js
+### Deployment
 
-URL: https://sabios-do-multiverso.onrender.com
+`Vercel` is the recommended production target because the project relies on server-side routes under `api/` for remote quotes and on-demand translation support.
 
-## Como Funciona
+#### Environment variables for translation
 
-Rota principal (/) renderiza EJS com frase traduzida
+To enable translation in production, configure:
 
-Endpoint AJAX (/api/nova) retorna JSON
+- `LIBRETRANSLATE_URL`
+- `LIBRETRANSLATE_API_KEY` optional
+- `LIBRETRANSLATE_TARGET` optional, default `pt`
 
-quoteService.js consome ZenQuotes + tradução
+### Suggested next steps
 
-Frontend gerencia animações, compartilhamento e LocalStorage
-
-CSS implementa glassmorphism com backdrop-filter
-
-## Principais Desafios Resolvidos
-
-Correções de sintaxe JavaScript na camada de serviços
-
-Fallback robusto para falhas de tradução
-
-Layout responsivo para textos longos
-
-Configuração multiplataforma (local + Render)
-
-Otimização de carregamento assíncrono
-
-## Destaques Técnicos
-
-Carregamento assíncrono com tratamento de erros
-
-Animações CSS com cubic-bezier
-
-HTML5 semântico (blockquote, cite)
-
-Preparado para PWA
-
-Performance otimizada
-
-## Notas
-
-Projeto desenvolvido para estudo e portfólio em Janeiro de 2026.
+- finalize and validate the translation flow in production;
+- add real screenshots to this README;
+- add UI tests;
+- refine mobile states even further;
+- feature the project inside a broader portfolio website.
