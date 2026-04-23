@@ -1,11 +1,5 @@
-/* global __HAS_TRANSLATE_PROXY__ */
-
 export async function translateQuoteContent(text) {
   if (!text || typeof text !== "string") {
-    return "";
-  }
-
-  if (typeof __HAS_TRANSLATE_PROXY__ !== "undefined" && !__HAS_TRANSLATE_PROXY__) {
     return "";
   }
 

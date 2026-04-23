@@ -534,6 +534,7 @@ function App() {
           ...previous,
           [currentQuote.id]: translatedText,
         }));
+        setShowOriginalQuote(false);
         setToastMessage("Traducao pronta para leitura.");
         return;
       }

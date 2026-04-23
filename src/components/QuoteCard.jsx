@@ -38,32 +38,27 @@ export function QuoteCard({
         <span className="quote-mark">"</span>
         <div className="translation-toolbar">
           <span className="translation-toolbar__label">
-            {isRemoteQuote ? (canToggleOriginal ? "Versoes disponiveis" : "Traducao sob demanda") : "Texto atual"}
+            {isRemoteQuote ? "Idioma da leitura" : "Texto atual"}
           </span>
           <div className="translation-toolbar__actions">
-            <button
-              className="translation-action"
-              data-state={
-                !isRemoteQuote ? "disabled" : isTranslating ? "loading" : canToggleOriginal ? "ready" : "idle"
-              }
-              disabled={!isRemoteQuote || isTransitioning || isTranslating}
-              type="button"
-              onClick={onTranslate}
-            >
-              {!isRemoteQuote ? "Ja esta em portugues" : isTranslating ? "Traduzindo..." : "Ver em portugues"}
-            </button>
-
-            {canToggleOriginal ? (
+            {isRemoteQuote ? (
               <div className="export-segmented" role="tablist" aria-label="Idioma da frase">
                 <button
                   aria-selected={!showOriginal}
                   className="export-segmented__button"
                   data-active={!showOriginal ? "true" : "false"}
-                  disabled={isTransitioning}
+                  disabled={isTransitioning || isTranslating}
                   type="button"
-                  onClick={() => onToggleOriginal(false)}
+                  onClick={() => {
+                    if (canToggleOriginal) {
+                      onToggleOriginal(false);
+                      return;
+                    }
+
+                    onTranslate();
+                  }}
                 >
-                  Em portugues
+                  {isTranslating ? "Traduzindo..." : "Em portugues"}
                 </button>
                 <button
                   aria-selected={showOriginal}
@@ -76,7 +71,9 @@ export function QuoteCard({
                   Original
                 </button>
               </div>
-            ) : null}
+            ) : (
+              <span className="translation-note">Leitura disponivel em portugues.</span>
+            )}
           </div>
         </div>
 

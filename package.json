@@ -21,6 +21,7 @@
   "license": "ISC",
   "description": "Galeria de frases em React com Vite pronta para GitHub Pages",
   "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

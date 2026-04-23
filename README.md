@@ -93,14 +93,6 @@ npm run build
 
 O caminho recomendado para producao e o `Vercel`, porque o projeto usa rotas em `api/` para apoiar o carregamento remoto de frases e a traducao sob demanda.
 
-#### Variaveis de ambiente para traducao
-
-Se quiser habilitar traducao no deploy, configure:
-
-- `LIBRETRANSLATE_URL`
-- `LIBRETRANSLATE_API_KEY` opcional
-- `LIBRETRANSLATE_TARGET` opcional, com padrao `pt`
-
 ### Possiveis proximos passos
 
 - finalizar e validar o fluxo de traducao em producao;
@@ -199,14 +191,6 @@ npm run build
 ### Deployment
 
 `Vercel` is the recommended production target because the project relies on server-side routes under `api/` for remote quotes and on-demand translation support.
-
-#### Environment variables for translation
-
-To enable translation in production, configure:
-
-- `LIBRETRANSLATE_URL`
-- `LIBRETRANSLATE_API_KEY` optional
-- `LIBRETRANSLATE_TARGET` optional, default `pt`
 
 ### Suggested next steps
 
