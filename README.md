@@ -46,13 +46,9 @@ O objetivo do projeto foi sair de uma base simples e transformar a experiencia e
 
 ### Screenshots
 
-Adicione aqui depois do deploy:
-
-```md
-![Home desktop](./docs/screenshots/home-desktop.png)
-![Filtros e leitura](./docs/screenshots/filters-reading.png)
-![Versao mobile](./docs/screenshots/mobile-view.png)
-```
+![Home desktop](./assets/home.png)
+![Filtros e leitura](./assets/filtro.png)
+![Versao mobile](./assets/mobile.png)
 
 ### Estrutura principal
 
@@ -145,13 +141,9 @@ The project started from a simpler base and was redesigned to feel more intentio
 
 ### Screenshots
 
-Add your screenshots here after deployment:
-
-```md
-![Home desktop](./docs/screenshots/home-desktop.png)
-![Filters and reading flow](./docs/screenshots/filters-reading.png)
-![Mobile view](./docs/screenshots/mobile-view.png)
-```
+![Home desktop](./assets/home.png)
+![Filters and reading flow](./assets/filtro.png)
+![Mobile view](./assets/mobile.png)
 
 ### Main structure
 
